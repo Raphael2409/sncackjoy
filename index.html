@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Snack'N'Joy - Food Truck</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      scroll-behavior: smooth;
+      background-color: #fff9f0;
+      color: #333;
+    }
+    header {
+      background: #ff6f00;
+      color: white;
+      text-align: center;
+      padding: 60px 20px 40px;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.8em;
+    }
+    nav {
+      background: #ffa726;
+      padding: 10px;
+      text-align: center;
+    }
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    section {
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    h2 {
+      color: #ff6f00;
+      border-bottom: 2px solid #ffcc80;
+      padding-bottom: 10px;
+    }
+    .info-boxes {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    .info-box {
+      background: #ffe0b2;
+      padding: 20px;
+      border-radius: 8px;
+      flex: 1;
+      min-width: 200px;
+    }
+    .menu-link {
+      display: inline-block;
+      margin-top: 15px;
+      background: #ff6f00;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 6px;
+      text-decoration: none;
+    }
+    .social-links a {
+      margin: 10px;
+      font-size: 1.4em;
+      text-decoration: none;
+    }
+    form input, form textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
+    form button {
+      background: #ff6f00;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    .gallery img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+      margin-bottom: 10px;
+    }
+    footer {
+      background: #ffe0b2;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9em;
+    }
+    @media (max-width: 600px) {
+      .info-boxes {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header id="accueil">
+  <h1>Snack'N'Joy</h1>
+  <p>Street Food Halal & Vegan - Ambiance Festival</p>
+</header>
+
+<nav>
+  <a href="#concept">Concept</a>
+  <a href="#infos">Infos</a>
+  <a href="#menu">Menu</a>
+  <a href="#contact">Contact</a>
+  <a href="#photos">Photos</a>
+  <a href="#certifications">Certifs</a>
+</nav>
+
+<section id="concept">
+  <h2>Le Concept</h2>
+  <p>Snack’N’Joy, c’est le food truck qui s’adapte à toi ! Street food halal & vegan, préparée selon tes goûts et servie avec le sourire dans une ambiance festive. Pas d’adresse fixe, on vient à toi le week-end !</p>
+</section>
+
+<section id="infos">
+  <h2>Infos Pratiques</h2>
+  <div class="info-boxes">
+    <div class="info-box">📅 Disponible les week-ends</div>
+    <div class="info-box">🚚 En déplacement (pas d’adresse fixe)</div>
+    <div class="info-box">🎉 Ambiance festival garantie</div>
+  </div>
+</section>
+
+<section id="menu">
+  <h2>La Carte</h2>
+  <p>Découvre nos plats halal & vegan faits maison !</p>
+  <a class="menu-link" href="menu.pdf" target="_blank">📄 Voir le menu (PDF)</a>
+</section>
+
+<section id="contact">
+  <h2>Contact</h2>
+  <p>Pour réserver, commander ou poser une question :</p>
+  <a class="menu-link" href="https://wa.me/33700000000" target="_blank">💬 WhatsApp</a>
+  <br><br>
+  <form>
+    <input type="text" placeholder="Votre nom" required>
+    <input type="email" placeholder="Votre e-mail" required>
+    <textarea placeholder="Votre message" rows="4" required></textarea>
+    <button type="submit">Envoyer</button>
+  </form>
+</section>
+
+<section id="photos">
+  <h2>Photos des Plats</h2>
+  <div class="gallery">
+    <img src="photo1.jpg" alt="Plat 1">
+    <img src="photo2.jpg" alt="Plat 2">
+    <img src="photo3.jpg" alt="Plat 3">
+  </div>
+</section>
+
+<section id="certifications">
+  <h2>Certifications</h2>
+  <p>✅ 100% Halal<br>🌱 Vegan Friendly</p>
+</section>
+
+<section class="social-links">
+  <h2>Suivez-nous</h2>
+  <a href="https://instagram.com/votreprofil" target="_blank">📸 Instagram</a>
+  <a href="https://tiktok.com/@votreprofil" target="_blank">🎥 TikTok</a>
+</section>
+
+<footer>
+  &copy; 2025 Snack’N’Joy - Tous droits réservés
+</footer>
+
+</body>
+</html>
