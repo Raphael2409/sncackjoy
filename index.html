@@ -1,163 +1,127 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Snack'N'Joy - Food Truck</title>
   <style>
     body {
       font-family: 'Segoe UI', Tahoma, sans-serif;
       margin: 0;
       scroll-behavior: smooth;
-      background-color: #f4f1e8; /* Beige naturel */
+      background-color: #f4f1e8;
       color: #2e3d2f;
       line-height: 1.6;
     }
-
-    /* Hero video */
     .hero-video {
       position: relative;
       width: 100%;
       height: 80vh;
       overflow: hidden;
     }
-
     .hero-video video {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
+      width: 100%; height: 100%; object-fit: cover;
     }
-
-    /* Logo superposé */
     .logo-overlay {
-      position: absolute;
-      top: 15px;
-      left: 15px;
-      
+      position: absolute; top: 15px; left: 15px;
     }
-
     .logo-overlay img {
-      width: 70px;
-      height: auto;
+      width: 80px; height: auto;
     }
-
-    /* Texte et boutons sur vidéo */
     .hero-overlay {
-      position: absolute;
-      top: 0; left: 0; right: 0; bottom: 0;
+      position: absolute; top: 0; left: 0; right: 0; bottom: 0;
       background: rgba(0,0,0,0.35);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      color: white;
-      text-align: center;
-      padding: 20px;
+      display: flex; flex-direction: column;
+      justify-content: center; align-items: center;
+      color: white; text-align: center; padding: 20px;
     }
-
     .hero-overlay h1 {
-      font-size: 2rem;
-      margin-bottom: 10px;
+      font-size: 2.5rem; margin-bottom: 10px;
     }
-
     .hero-overlay p {
-      font-size: 1rem;
-      margin-bottom: 20px;
+      font-size: 1.1rem; margin-bottom: 20px;
     }
-
     .cta-links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      justify-content: center;
+      display: flex; flex-wrap: wrap; gap: 10px; justify-content: center;
     }
-
     .cta-links a {
-      background: #4caf50; /* Vert halal/vegan */
+      background: linear-gradient(45deg, #e53935, #1e88e5);
       color: white;
       padding: 10px 15px;
       border-radius: 8px;
       text-decoration: none;
-      font-size: 1rem;
       font-weight: bold;
-      transition: background 0.3s ease;
+      transition: opacity 0.3s ease;
     }
-
     .cta-links a:hover {
-      background: #388e3c;
+      opacity: 0.85;
     }
-
-    /* Navigation */
     nav {
-      background: #3d7b3d; /* Vert foncé */
+      background: #1e3a5f;
       padding: 10px;
       text-align: center;
     }
-
     nav a {
       color: #fefefe;
       margin: 0 15px;
-      text-decoration: none;
       font-weight: 500;
+      text-decoration: none;
     }
-
-    /* Sections */
+    nav a:hover {
+      text-decoration: underline;
+    }
     section {
       padding: 30px 15px;
       max-width: 1100px;
       margin: auto;
     }
-
     h2 {
-      color: #4caf50;
-      border-bottom: 2px solid #a5d6a7;
-      padding-bottom: 8px;
+      color: #e53935;
+      border-bottom: 2px solid #1e88e5;
       margin-bottom: 20px;
+      padding-bottom: 8px;
     }
-
-    /* Boîtes infos */
+    .bg-alt {
+      background-color: #f0f4ff;
+      border-radius: 8px;
+      padding: 30px 15px;
+    }
     .info-boxes {
       display: flex;
       flex-wrap: wrap;
       gap: 15px;
     }
-
     .info-box {
-      background: #e8f5e9; /* Vert clair */
+      background: #fbe9e7;
       padding: 15px;
       border-radius: 8px;
       flex: 1;
       min-width: 200px;
       text-align: center;
     }
-
-    /* Menu images */
     .menu-images {
       display: flex;
       flex-wrap: wrap;
       gap: 15px;
     }
-
     .menu-images img {
       flex: 1;
       min-width: 200px;
       max-width: 100%;
       border-radius: 8px;
     }
-
-    /* Galerie */
     .gallery {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
       gap: 15px;
     }
-
     .gallery img {
       width: 100%;
+      height: 180px;
+      object-fit: cover;
       border-radius: 8px;
+      display: block;
+      margin: auto;
     }
-
-    /* Formulaire */
     form input, form textarea {
       width: 100%;
       padding: 10px;
@@ -165,84 +129,56 @@
       border-radius: 6px;
       border: 1px solid #ccc;
     }
-
     form button {
-      background: #4caf50;
+      background: linear-gradient(45deg, #e53935, #1e88e5);
       color: white;
       padding: 10px 20px;
       border: none;
       border-radius: 6px;
       cursor: pointer;
     }
-
     footer {
-      background: #3d7b3d;
+      background: #1e3a5f;
       text-align: center;
       padding: 15px;
       color: white;
     }
-
-    /* Responsive */
     @media (max-width: 768px) {
       .hero-overlay h1 {
-        font-size: 1.5rem;
+        font-size: 1.8rem;
       }
       .cta-links a {
         padding: 8px 12px;
         font-size: 0.9rem;
       }
     }
-  section.alt {
-    background-color: #f4faf5; /* Vert pâle halal/veggie */
-    border-radius: 8px;
-  }
-
-  /* Galerie - taille uniforme */
-  .gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-    gap: 15px;
-    justify-items: center;
-  }
-
-  .gallery img {
-    width: 220px;
-    height: 220px;
-    object-fit: cover;
-    border-radius: 8px;
-    display: block;
-  }
   </style>
 </head>
 <body>
 
-<!-- Hero avec logo -->
 <div class="hero-video">
   <video autoplay muted loop playsinline>
-    <source src="img/video_pres.mov" type="video/mp4">
+    <source src="img/video_pres.mp4" type="video/mp4" />
     Votre navigateur ne supporte pas la vidéo.
   </video>
-
-  <!-- Logo -->
   <div class="logo-overlay">
-    <img src="img/logo_blue_n_red.png" alt="Logo Snack'N'Joy">
+    <img src="img/logo_blue_n_red.png" alt="Logo Snack'N'Joy" />
   </div>
-
-  <!-- Texte & boutons -->
   <div class="hero-overlay">
     <h1>Snack'N'Joy</h1>
     <p>Street Food Halal & Vegan - Ambiance Festival</p>
     <div class="cta-links">
-      <a href="https://wa.me/33700000000" target="_blank">💬 WhatsApp</a>
-      <a href="https://instagram.com/votreprofil" target="_blank">📸 Instagram</a>
-      <a href="https://tiktok.com/@votreprofil" target="_blank">🎥 TikTok</a>
+      <a href="https://www.instagram.com/snacknjoy_foodtruck?igsh=b21tZTdwYjNjcmdx&utm_source=qr" target="_blank">📸 Instagram</a>
+      <a href="https://www.tiktok.com/@snacknjoyfood?_t=ZN-8yed9T42GhS&_r=1" target="_blank">🎥 TikTok</a>
+      <a href="https://www.facebook.com/share/164BTUnsGd/?mibextid=wwXIfr" target="_blank">f Facebook</a>
     </div>
   </div>
 </div>
 
 <nav>
   <a href="#concept">Concept</a>
-  <a href="#infos">Infos</a>
+  <a href="#apropos">À propos</a>
+  <a href="#findus">Où nous trouver</a>
   <a href="#menu">Menu</a>
   <a href="#photos">Photos</a>
   <a href="#contact">Contact</a>
@@ -251,79 +187,67 @@
 <section id="concept">
   <h2>Le Concept</h2>
   <p>Snack’N’Joy, c’est le food truck qui s’adapte à toi ! Street food halal & vegan, préparée selon tes goûts et servie avec le sourire dans une ambiance festive. Pas d’adresse fixe, on vient à toi le week-end !</p>
-  <img src="img/snack_all_pres.png" alt="Présentation Snack'N'Joy" style="max-width:100%; border-radius:8px; margin-top:15px;">
+  <img src="img/snack_all_pres.png" alt="Présentation Snack'N'Joy" style="max-width:100%; border-radius:8px; margin-top:15px;" />
 </section>
 
-<!-- À PROPOS -->
-<section id="apropos">
+<section id="apropos" class="bg-alt">
   <h2>À propos</h2>
-  <p>
-    Snack’N’Joy, c’est un food truck engagé proposant une cuisine de qualité,
-    accessible et respectueuse des régimes halal et vegan.  
-    Nous préparons tout maison avec amour pour vous offrir une expérience
-    gourmande et responsable, lors de festivals et sur les marchés d’Île-de-France.
-  </p>
+  <p>Snack’N’Joy, c’est un food truck engagé proposant une cuisine de qualité, accessible et respectueuse des régimes halal et vegan. Nous préparons tout maison avec amour pour vous offrir une expérience gourmande et responsable, lors de festivals et sur les marchés d’Île-de-France.</p>
 </section>
 
-<!-- OU NOUS TROUVER -->
-<section id="findus" style="background:#e8f5e9; border-radius:8px; padding:20px;">
+<section id="findus">
   <h2>📍 Où nous trouver ?</h2>
-  <p>
-    Snack’N’Joy est un food truck itinérant !  
-    Nous serons présents dans différents marchés, événements et festivals
-    en Île-de-France… et peut-être bientôt près de chez toi !  
-    ➡️ <strong>Suis-nous sur les réseaux</strong> pour connaître notre emplacement chaque semaine.
-  </p>
+  <p>Snack’N’Joy est un food truck itinérant ! Nous serons présents dans différents marchés, événements et festivals en Île-de-France… et peut-être bientôt près de chez toi ! ➡ <strong>Suis-nous sur les réseaux</strong> pour connaître notre emplacement chaque semaine.</p>
 </section>
 
-<section id="infos">
+<section id="infos" class="bg-alt">
   <h2>Infos Pratiques</h2>
   <div class="info-boxes">
     <div class="info-box">📅 Disponible les week-ends</div>
     <div class="info-box">🚚 En déplacement (pas d’adresse fixe)</div>
-    <div class="info-box">🌱 100% Halal & Vegan-Friendly</div>
+    <div class="info-box">🌱 100 % Halal & Vegan Friendly</div>
   </div>
 </section>
 
 <section id="menu">
   <h2>Notre Carte</h2>
   <div class="menu-images">
-    <img src="img/menu1.png" alt="Menu Snack'N'Joy">
-    <img src="img/menu2.png" alt="Menu Snack'N'Joy">
+    <img src="img/menu1.png" alt="Menu Snack'N'Joy" />
+    <img src="img/menu2.png" alt="Menu Snack'N'Joy" />
   </div>
 </section>
 
-<section id="photos">
+<section id="photos" class="bg-alt">
   <h2>Galerie</h2>
   <div class="gallery">
-    <img src="img/produit_far.png" alt="Produit phare">
-    <img src="img/packagin.jpg" alt="Packaging Snack'N'Joy">
-    <img src="img/box_snack.png" alt="Box Snack'N'Joy">
-    <img src="img/fidelity_card.png" alt="Carte de fidélité">
-    <img src="img/from2k25.png" alt="Depuis 2025">
-    <img src="img/logo_black_n_white.png" alt="Logo noir et blanc">
-    <img src="img/thanksful.png" alt="Remerciement">
+    <img src="img/produit_far.png" alt="Produit phare" />
+    <img src="img/packaging.jpg" alt="Packaging Snack'N'Joy" />
+    <img src="img/box_snack.png" alt="Box Snack'N'Joy" />
+    <img src="img/fidelity_card.png" alt="Carte de fidélité" />
+    <img src="img/from2k25.png" alt="Depuis 2025" />
+    <img src="img/logo_black_n_white.png" alt="Logo noir et blanc" />
+    <img src="img/thanksful.png" alt="Remerciement" />
   </div>
 </section>
 
 <section id="contact">
   <h2>Contact</h2>
-  <p>Pour réserver, commander ou poser une question :</p>
+  <p>Pour réserver ou poser une question :</p>
   <div class="cta-links">
-    <a href="https://wa.me/33700000000" target="_blank">💬 WhatsApp</a>
-    <a href="https://instagram.com/votreprofil" target="_blank">📸 Instagram</a>
-    <a href="https://tiktok.com/@votreprofil" target="_blank">🎥 TikTok</a>
+    <a href="https://www.instagram.com/snacknjoy_foodtruck?igsh=b21tZTdwYjNjcmdx&utm_source=qr" target="_blank">📸 Instagram</a>
+    <a href="https://www.tiktok.com/@snacknjoyfood?_t=ZN-8yed9T42GhS&_r=1" target="_blank">🎥 TikTok</a>
+    <a href="https://www.facebook.com/share/164BTUnsGd/?mibextid=wwXIfr" target="_blank">f Facebook</a>
   </div>
   <form>
-    <input type="text" placeholder="Votre nom" required>
-    <input type="email" placeholder="Votre e-mail" required>
+    <input type="text" placeholder="Votre nom" required />
+    <input type="email" placeholder="Votre e-mail" required />
     <textarea placeholder="Votre message" rows="4" required></textarea>
     <button type="submit">Envoyer</button>
   </form>
 </section>
 
 <footer>
-  &copy; 2025 Snack’N’Joy - Tous droits réservés
+  &copy; 2025 Snack’N’Joy – Tous droits réservés
 </footer>
 
 </body>
